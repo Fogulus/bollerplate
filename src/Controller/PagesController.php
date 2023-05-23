@@ -16,12 +16,22 @@ class PagesController extends AbstractController
             'title' => 'Contact'
         ]);
     }
+
     #[Route('/cgu', name: 'pages_cgu')]
     public function cgu(): Response
     {
         return $this->render('pages/index.html.twig', [
             'controller_name' => 'PagesController',
             'title' => 'CGU'
+        ]);
+    }
+
+    #[Route('/mentions-legales', name: 'pages_mentions')]
+    public function mentions(): Response
+    {
+        return $this->render('pages/index.html.twig', [
+            'controller_name' => 'PagesController',
+            'title' => 'Mentions légales'
         ]);
     }
 }
